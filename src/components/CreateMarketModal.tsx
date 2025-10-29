@@ -44,16 +44,16 @@ export function CreateMarketModal({ walletAddress, onClose, onSuccess }: CreateM
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-black rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="p-6 border-b border-yellow-400/30 flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-white">Create New Market</h2>
-          <button onClick={onClose} className="text-white/60 hover:text-white">
-            <X className="w-6 h-6" />
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-3 sm:p-4">
+      <div className="bg-black rounded-xl max-w-2xl w-full max-h-[95vh] overflow-y-auto">
+        <div className="p-4 sm:p-6 border-b border-yellow-400/30 flex items-center justify-between sticky top-0 bg-black z-10">
+          <h2 className="text-xl sm:text-2xl font-bold text-white">Create New Market</h2>
+          <button onClick={onClose} className="text-white/60 hover:text-white flex-shrink-0">
+            <X className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-6">
+        <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-4 sm:space-y-6">
           <div>
             <label className="block text-sm font-medium text-white/70 mb-2">
               Market Question
@@ -64,7 +64,7 @@ export function CreateMarketModal({ walletAddress, onClose, onSuccess }: CreateM
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Will BTC reach $100k by end of 2025?"
               required
-              className="w-full bg-black border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full bg-black border border-slate-600 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
             />
           </div>
 
@@ -78,11 +78,11 @@ export function CreateMarketModal({ walletAddress, onClose, onSuccess }: CreateM
               placeholder="Provide details about the market resolution criteria..."
               rows={4}
               required
-              className="w-full bg-black border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full bg-black border border-slate-600 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-white/70 mb-2">
                 Category

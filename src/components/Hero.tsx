@@ -49,59 +49,59 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
             <span className="gradient-text retro-font">degen.xyz</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-4">
+          <p className="text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto mb-3 sm:mb-4 px-2">
             Trade on real-world events with zero fees using DEGEN tokens
           </p>
-          <p className="text-white/70 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto px-2">
             A decentralized prediction market on BNB Chain where collective intelligence meets DeFi
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <div className="bg-black/80 backdrop-blur-md rounded-xl p-6 border-2 border-yellow-400 glow-effect">
-            <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-yellow-400 mb-4 mx-auto">
-              <DollarSign className="w-6 h-6 text-black" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+          <div className="bg-black/80 backdrop-blur-md rounded-xl p-4 sm:p-6 border-2 border-yellow-400 glow-effect">
+            <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-yellow-400 mb-2 sm:mb-4 mx-auto">
+              <DollarSign className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-yellow-400 mb-1">
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 mb-1">
                 {stats.totalVolume.toFixed(2)}
               </p>
-              <p className="text-sm text-white/70">Total Volume (BNB)</p>
+              <p className="text-xs sm:text-sm text-white/70">Total Volume (BNB)</p>
             </div>
           </div>
 
-          <div className="bg-black/80 backdrop-blur-md rounded-xl p-6 border-2 border-yellow-400 glow-effect">
-            <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-yellow-400 mb-4 mx-auto">
-              <TrendingUp className="w-6 h-6 text-black" />
+          <div className="bg-black/80 backdrop-blur-md rounded-xl p-4 sm:p-6 border-2 border-yellow-400 glow-effect">
+            <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-yellow-400 mb-2 sm:mb-4 mx-auto">
+              <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-yellow-400 mb-1">{stats.activeMarkets}</p>
-              <p className="text-sm text-white/70">Active Markets</p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 mb-1">{stats.activeMarkets}</p>
+              <p className="text-xs sm:text-sm text-white/70">Active Markets</p>
             </div>
           </div>
 
-          <div className="bg-black/80 backdrop-blur-md rounded-xl p-6 border-2 border-yellow-400 glow-effect">
-            <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-yellow-400 mb-4 mx-auto">
-              <Users className="w-6 h-6 text-black" />
+          <div className="bg-black/80 backdrop-blur-md rounded-xl p-4 sm:p-6 border-2 border-yellow-400 glow-effect">
+            <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-yellow-400 mb-2 sm:mb-4 mx-auto">
+              <Users className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-yellow-400 mb-1">{stats.totalTraders}</p>
-              <p className="text-sm text-white/70">Total Traders</p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 mb-1">{stats.totalTraders}</p>
+              <p className="text-xs sm:text-sm text-white/70">Total Traders</p>
             </div>
           </div>
 
-          <div className="bg-black/80 backdrop-blur-md rounded-xl p-6 border-2 border-yellow-400 glow-effect">
-            <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-yellow-400 mb-4 mx-auto">
-              <BarChart3 className="w-6 h-6 text-black" />
+          <div className="bg-black/80 backdrop-blur-md rounded-xl p-4 sm:p-6 border-2 border-yellow-400 glow-effect">
+            <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-yellow-400 mb-2 sm:mb-4 mx-auto">
+              <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-yellow-400 mb-1">{stats.totalBets}</p>
-              <p className="text-sm text-white/70">Total Predictions</p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 mb-1">{stats.totalBets}</p>
+              <p className="text-xs sm:text-sm text-white/70">Total Predictions</p>
             </div>
           </div>
         </div>

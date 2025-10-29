@@ -103,53 +103,53 @@ export function BettingModal({ market, walletAddress, onClose, onSuccess }: Bett
   );
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-black rounded-xl max-w-2xl w-full">
-        <div className="p-6 border-b border-yellow-400/30 flex items-center justify-between">
-          <div>
-            <h2 className="text-2xl font-bold text-white">Place Bet</h2>
-            <p className="text-white/60 text-sm mt-1">{market.title}</p>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-3 sm:p-4">
+      <div className="bg-black rounded-xl max-w-2xl w-full max-h-[95vh] overflow-y-auto">
+        <div className="p-4 sm:p-6 border-b border-yellow-400/30 flex items-center justify-between sticky top-0 bg-black z-10">
+          <div className="flex-1 min-w-0 pr-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">Place Bet</h2>
+            <p className="text-white/60 text-xs sm:text-sm mt-1 line-clamp-1">{market.title}</p>
           </div>
-          <button onClick={onClose} className="text-white/60 hover:text-white">
-            <X className="w-6 h-6" />
+          <button onClick={onClose} className="text-white/60 hover:text-white flex-shrink-0">
+            <X className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
 
-        <div className="p-6 space-y-6">
+        <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
           {market.is_degen_market && (
-            <div className="bg-yellow-400/10 border border-yellow-400/30 rounded-lg p-4 flex items-start space-x-3">
-              <AlertCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+            <div className="bg-yellow-400/10 border border-yellow-400/30 rounded-lg p-3 sm:p-4 flex items-start space-x-2 sm:space-x-3">
+              <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-yellow-400 font-semibold">DEGEN Market - Zero Fees</p>
-                <p className="text-white/70 text-sm mt-1">
+                <p className="text-yellow-400 font-semibold text-sm sm:text-base">DEGEN Market - Zero Fees</p>
+                <p className="text-white/70 text-xs sm:text-sm mt-1">
                   This market uses the native DEGEN token with no trading fees
                 </p>
               </div>
             </div>
           )}
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3">
             <button
               onClick={() => setPosition('yes')}
-              className={`py-4 px-6 rounded-lg font-semibold transition-all ${
+              className={`py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold transition-all ${
                 position === 'yes'
                   ? 'bg-yellow-400 text-white shadow-lg shadow-green-500/30'
                   : 'bg-black text-white/70 hover:bg-yellow-400/10'
               }`}
             >
-              <div className="text-2xl mb-1">YES</div>
-              <div className="text-sm opacity-80">{probability.toFixed(1)}%</div>
+              <div className="text-xl sm:text-2xl mb-1">YES</div>
+              <div className="text-xs sm:text-sm opacity-80">{probability.toFixed(1)}%</div>
             </button>
             <button
               onClick={() => setPosition('no')}
-              className={`py-4 px-6 rounded-lg font-semibold transition-all ${
+              className={`py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold transition-all ${
                 position === 'no'
                   ? 'bg-white text-white shadow-lg shadow-red-500/30'
                   : 'bg-black text-white/70 hover:bg-yellow-400/10'
               }`}
             >
-              <div className="text-2xl mb-1">NO</div>
-              <div className="text-sm opacity-80">{(100 - probability).toFixed(1)}%</div>
+              <div className="text-xl sm:text-2xl mb-1">NO</div>
+              <div className="text-xs sm:text-sm opacity-80">{(100 - probability).toFixed(1)}%</div>
             </button>
           </div>
 
