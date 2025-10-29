@@ -193,13 +193,13 @@ function App() {
       <Header walletAddress={walletAddress} balance={balance} onConnect={handleConnect} />
       <Hero />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center space-x-4">
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 sm:py-8 md:py-12">
+        <div className="mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0 mb-4 sm:mb-6">
+            <div className="flex items-center space-x-2 sm:space-x-4 overflow-x-auto pb-2 sm:pb-0">
               <button
                 onClick={() => setActiveTab('markets')}
-                className={`px-8 py-3 rounded-xl font-bold transition-all ${
+                className={`px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl font-bold transition-all text-sm sm:text-base whitespace-nowrap ${
                   activeTab === 'markets'
                     ? 'bg-yellow-400 text-black shadow-lg shadow-yellow-500/50'
                     : 'bg-black border-2 border-yellow-400/30 text-white hover:border-yellow-400'
@@ -210,7 +210,7 @@ function App() {
               {walletAddress && (
                 <button
                   onClick={() => setActiveTab('portfolio')}
-                  className={`px-8 py-3 rounded-xl font-bold transition-all ${
+                  className={`px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl font-bold transition-all text-sm sm:text-base whitespace-nowrap ${
                     activeTab === 'portfolio'
                       ? 'bg-yellow-400 text-black shadow-lg shadow-yellow-500/50'
                       : 'bg-black border-2 border-yellow-400/30 text-white hover:border-yellow-400'
@@ -221,9 +221,9 @@ function App() {
               )}
               <button
                 onClick={() => setCurrentPage('getting-started')}
-                className="px-8 py-3 rounded-xl font-bold transition-all bg-black border-2 border-yellow-400/30 text-white hover:border-yellow-400 flex items-center space-x-2"
+                className="px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl font-bold transition-all bg-black border-2 border-yellow-400/30 text-white hover:border-yellow-400 flex items-center space-x-1.5 sm:space-x-2 text-sm sm:text-base whitespace-nowrap"
               >
-                <BookOpen className="w-5 h-5" />
+                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Docs</span>
               </button>
             </div>
@@ -231,26 +231,27 @@ function App() {
             {walletAddress && activeTab === 'markets' && (
               <button
                 onClick={() => setShowCreateModal(true)}
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl flex items-center space-x-2 transition-all shadow-lg shadow-yellow-500/50"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl flex items-center space-x-1.5 sm:space-x-2 transition-all shadow-lg shadow-yellow-500/50 text-sm sm:text-base whitespace-nowrap w-full sm:w-auto justify-center"
               >
-                <Plus className="w-5 h-5" />
-                <span>Create Market</span>
+                <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="hidden xs:inline">Create Market</span>
+                <span className="xs:hidden">Create</span>
               </button>
             )}
           </div>
 
           {activeTab === 'markets' && (
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <SearchBar value={searchQuery} onChange={setSearchQuery} />
 
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <Filter className="w-5 h-5 text-white/60" />
-                  <span className="text-white/60 font-medium">Category:</span>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-0 sm:space-x-4">
+                <div className="flex items-center space-x-2 flex-1">
+                  <Filter className="w-4 h-4 sm:w-5 sm:h-5 text-white/60 flex-shrink-0" />
+                  <span className="text-white/60 font-medium text-sm sm:text-base whitespace-nowrap">Category:</span>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="bg-black border-2 border-yellow-400/30 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    className="bg-black border-2 border-yellow-400/30 text-white rounded-lg px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 flex-1 sm:flex-initial"
                   >
                     {categories.map((cat) => (
                       <option key={cat} value={cat}>
@@ -260,12 +261,12 @@ function App() {
                   </select>
                 </div>
 
-                <div className="flex items-center space-x-2">
-                  <span className="text-white/60 font-medium">Status:</span>
+                <div className="flex items-center space-x-2 flex-1">
+                  <span className="text-white/60 font-medium text-sm sm:text-base whitespace-nowrap">Status:</span>
                   <select
                     value={selectedStatus}
                     onChange={(e) => setSelectedStatus(e.target.value)}
-                    className="bg-black border-2 border-yellow-400/30 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    className="bg-black border-2 border-yellow-400/30 text-white rounded-lg px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 flex-1 sm:flex-initial"
                   >
                     {statuses.map((status) => (
                       <option key={status} value={status}>
@@ -281,12 +282,12 @@ function App() {
 
         {activeTab === 'markets' ? (
           <>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-              <div className="lg:col-span-2 space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 lg:mb-12">
+              <div className="lg:col-span-2 space-y-4 sm:space-y-6 lg:space-y-8">
                 <TrendingMarkets onMarketClick={handleMarketClick} />
                 <RecentActivity limit={8} />
               </div>
-              <div className="space-y-8">
+              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
                 <TokenInfo />
                 <Leaderboard />
               </div>
@@ -298,10 +299,10 @@ function App() {
               </div>
             ) : filteredMarkets.length > 0 ? (
               <>
-                <h2 className="text-3xl font-bold gradient-text mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold gradient-text mb-4 sm:mb-6 md:mb-8">
                   {searchQuery ? 'Search Results' : 'All Markets'}
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
                   {filteredMarkets.map((market) => (
                     <MarketCard
                       key={market.id}
