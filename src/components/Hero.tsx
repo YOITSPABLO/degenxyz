@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { TrendingUp, Users, DollarSign, BarChart3 } from 'lucide-react';
+import { TrendingUp, Users, DollarSign, BarChart3, Twitter, Github } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
 export function Hero() {
@@ -57,9 +57,29 @@ export function Hero() {
           <p className="text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto mb-3 sm:mb-4 px-2">
             Trade on real-world events with zero fees using DEGEN tokens
           </p>
-          <p className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto px-2">
+          <p className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto px-2 mb-4 sm:mb-6">
             A decentralized prediction market on BNB Chain where collective intelligence meets DeFi
           </p>
+          <div className="flex items-center justify-center space-x-4 mt-4 sm:mt-6">
+            <a
+              href="https://x.com/degenx_yz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black/80 backdrop-blur-md border-2 border-yellow-400/30 hover:border-yellow-400 rounded-lg px-4 sm:px-6 py-2 sm:py-3 flex items-center space-x-2 transition-all group"
+            >
+              <Twitter className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 group-hover:scale-110 transition-transform" />
+              <span className="text-white font-semibold text-sm sm:text-base">Follow Us</span>
+            </a>
+            <a
+              href="https://github.com/YOITSPABLO/degenxyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black/80 backdrop-blur-md border-2 border-yellow-400/30 hover:border-yellow-400 rounded-lg px-4 sm:px-6 py-2 sm:py-3 flex items-center space-x-2 transition-all group"
+            >
+              <Github className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 group-hover:scale-110 transition-transform" />
+              <span className="text-white font-semibold text-sm sm:text-base">GitHub</span>
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">

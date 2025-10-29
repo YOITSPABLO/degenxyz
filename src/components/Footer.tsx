@@ -1,4 +1,4 @@
-import { Github, Twitter, Send, BookOpen, TrendingUp } from 'lucide-react';
+import { Github, Twitter, BookOpen, TrendingUp } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -22,14 +22,6 @@ export function Footer() {
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-black border-2 border-yellow-400/30 hover:border-yellow-400 flex items-center justify-center transition-colors"
               >
                 <Twitter className="w-4 h-4 sm:w-5 sm:h-5 text-white/60 hover:text-yellow-400" />
-              </a>
-              <a
-                href="https://t.me/coinsult_tg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-black border-2 border-yellow-400/30 hover:border-yellow-400 flex items-center justify-center transition-colors"
-              >
-                <Send className="w-4 h-4 sm:w-5 sm:h-5 text-white/60 hover:text-yellow-400" />
               </a>
               <a
                 href="https://github.com/YOITSPABLO/degenxyz"
