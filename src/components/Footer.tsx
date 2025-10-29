@@ -16,7 +16,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-3 sm:space-x-4">
               <a
-                href="https://twitter.com/betify"
+                href="https://x.com/degenx_yz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-black border-2 border-yellow-400/30 hover:border-yellow-400 flex items-center justify-center transition-colors"
@@ -32,7 +32,7 @@ export function Footer() {
                 <Send className="w-4 h-4 sm:w-5 sm:h-5 text-white/60 hover:text-yellow-400" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/YOITSPABLO/degenxyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-black border-2 border-yellow-400/30 hover:border-yellow-400 flex items-center justify-center transition-colors"
